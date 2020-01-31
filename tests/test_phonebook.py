@@ -6,7 +6,8 @@ from src.phonebook.phonebook import Phonebook
 def phonebook():
     "Provides an empty Phonebook resource"
     phonebook = Phonebook()
-    return phonebook
+    yield phonebook
+    return phonebook.clear()
 
 
 def test_lookup_by_name(phonebook):
