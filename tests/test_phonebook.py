@@ -3,11 +3,9 @@ from src.phonebook.phonebook import Phonebook
 
 
 @pytest.fixture
-def phonebook():
-    "Provides an empty Phonebook resource"
-    phonebook = Phonebook()
-    yield phonebook
-    return phonebook.clear()
+def phonebook(tmpdir):
+    "Provides an empty Phonebook"
+    return Phonebook(tmpdir)
 
 
 def test_lookup_by_name(phonebook):
