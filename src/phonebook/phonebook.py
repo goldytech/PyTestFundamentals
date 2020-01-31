@@ -2,7 +2,7 @@ class Phonebook:
 
     def __init__(self):
         self.numbers = {}
-        self.cache = open(self.filename, "w")
+
 
     def add(self, name, number):
         self.numbers[name] = number
