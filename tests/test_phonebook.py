@@ -5,7 +5,8 @@ from src.phonebook.phonebook import Phonebook
 @pytest.fixture
 def phonebook():
     "Provides an empty Phonebook resource"
-    return Phonebook()
+    phonebook = Phonebook()
+    return phonebook
 
 
 def test_lookup_by_name(phonebook):
