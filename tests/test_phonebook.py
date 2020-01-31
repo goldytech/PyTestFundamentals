@@ -13,6 +13,7 @@ def test_lookup_by_name(phonebook):
     assert "1234" == phonebook.lookup("Bob")
 
 
+@pytest.mark.slow
 def test_phonebook_contains_all_names(phonebook):
     phonebook.add("Bob", "1234")
     assert "Bob" in phonebook.names()
